@@ -26,5 +26,12 @@ Sample:
 $ ansible-playbook add-user.yml -k -K
 ```
 
-## Coming soon
-Modify user, Remove user.
+## Remove user
+
+```console
+$ ansible-playbook remove-user.yml
+```
+This command wll show promt ask user name want to remove.
+
+## Maybe add later
+Modify user.
