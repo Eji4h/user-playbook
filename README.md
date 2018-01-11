@@ -33,6 +33,3 @@ $ ansible-playbook add-user.yml -k -K
 $ ansible-playbook remove-user.yml
 ```
 This command wll show promt ask user name want to remove.
-
-## Maybe add later
-Modify user.
