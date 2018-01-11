@@ -21,6 +21,7 @@ ask for privilege escalation password (if you' don't login with root). <br />
 --become-user=BECOME_USER
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 run operations as this user (default=root). <br />
+
 Sample:
 ```console
 $ ansible-playbook add-user.yml -k -K
