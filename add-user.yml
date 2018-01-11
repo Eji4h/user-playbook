@@ -1,0 +1,29 @@
+---
+- hosts: all
+  become: yes
+
+  vars_prompt:
+    - name: "user_name"
+      prompt: "What is your user name?"
+      private: no
+
+    - name: "user_password"
+      prompt: "What is your user password?"
+      private: yes
+      default: ""
+
+    - name: "user_groups"
+      prompt: "What is your user groups?"
+      private: no
+      default: ""
+
+  tasks:
+
+    - name: Create user
+      user: 
+        name: "{{ user_name }}"
+        password: "{{ user_password | password_hash('sha512') }}"
+        update_password: on_create
+        shell: /bin/bash
+        groups: "{{ user_groups }}"
+        append: yes
