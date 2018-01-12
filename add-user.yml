@@ -17,6 +17,11 @@
       private: no
       default: ""
 
+    - name: "authorized_key"
+      prompt: 'Path to authorized key file? (Type "no" to skiped)'
+      private: no
+      default: "~/.ssh/id_rsa.pub"
+
   tasks:
 
     - name: Create user
@@ -27,3 +32,9 @@
         shell: /bin/bash
         groups: "{{ user_groups }}"
         append: yes
+
+    - name: Set authorized key took from file
+      authorized_key:
+        user: "{{ user_name }}"
+        state: present
+        key: "{{ lookup('file', '{{ authorized_key }}') }}"
