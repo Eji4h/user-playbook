@@ -9,7 +9,7 @@ Make sure [Ansible](http://docs.ansible.com/ansible/latest/intro_installation.ht
 ```console
 $ ansible-playbook add-user.yml
 ```
-This command wll show promt ask user name, password, groups. <br />
+This command wll show promt ask user name, password, groups, authorized key file path. <br />
 
 _**`groups need use [ ] cover, if you have more than one group to add.`**_ <br />
 Sample:
