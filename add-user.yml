@@ -38,3 +38,4 @@
         user: "{{ user_name }}"
         state: present
         key: "{{ lookup('file', '{{ authorized_key }}') }}"
+      when: authorized_key != "n" and authorized_key != "no"
