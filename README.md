@@ -2,7 +2,7 @@
 Ansible playbook for normally manage user all of host in you control.
 
 ## Notation
-Make sure [Ansible](http://docs.ansible.com/ansible/latest/intro_installation.html) is already installed.
+Make sure [Ansible](http://docs.ansible.com/ansible/latest/intro_installation.html) and [Passlib](https://passlib.readthedocs.io/en/stable/install.html)is already installed.
 
 ## Create user
 

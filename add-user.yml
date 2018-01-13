@@ -10,7 +10,8 @@
     - name: "user_password"
       prompt: "What is user password?"
       private: yes
-      default: ""
+      encrypt: "sha512_crypt"
+      confirm: yes
 
     - name: "user_groups"
       prompt: "What is user groups?"
@@ -27,7 +28,7 @@
     - name: Create user
       user: 
         name: "{{ user_name }}"
-        password: "{{ user_password | password_hash('sha512') }}"
+        password: "{{ user_password }}"
         update_password: on_create
         shell: /bin/bash
         groups: "{{ user_groups }}"
